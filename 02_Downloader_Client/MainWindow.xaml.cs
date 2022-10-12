@@ -49,7 +49,8 @@ namespace _02_Downloader_Client
         {
             // вибір шляху збереження надати користувачу
             string fileName = Path.GetFileName(address);
-            string destination = $@"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}\{fileName}";
+            string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string destination = Path.Combine(desktopPath, fileName);
             
             // додати обробку помилок (try catch)
             await client.DownloadFileTaskAsync(address, destination);

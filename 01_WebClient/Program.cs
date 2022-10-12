@@ -18,7 +18,7 @@ namespace _01_WebClient
         static async Task Main(string[] args)
         {
             // -=-=-=-=-=-=-=-=-=-=- Donwload File using HttpClient -=-=-=-=-=-=-=-=-=-=-
-            //HttpClient client = new HttpClient();
+            HttpClient httpClient = new HttpClient();
 
             /////////////// variant 1
             //HttpRequestMessage message = new HttpRequestMessage()
@@ -26,7 +26,7 @@ namespace _01_WebClient
             //    Method = HttpMethod.Get,
             //    RequestUri = new Uri(imageUri)
             //};
-            //HttpResponseMessage response = await client.SendAsync(message);
+            //HttpResponseMessage response = await httpClient.SendAsync(message);
             //Console.WriteLine("Status: " + response.StatusCode);
 
             //using (FileStream fs = new FileStream(desktopPath + "/image.jpg", FileMode.Create))
@@ -35,16 +35,16 @@ namespace _01_WebClient
             //}
 
             /////////////// variant 2
-            //byte[] data = await client.GetByteArrayAsync(image2Uri);
-            //File.WriteAllBytes($@"{desktopPath}/image.jpg", data);
+            byte[] data = await httpClient.GetByteArrayAsync(image2Uri);
+            File.WriteAllBytes($@"{desktopPath}/image.jpg", data);
 
             // -=-=-=-=-=-=-=-=-=-=- Donwload File using WebClient -=-=-=-=-=-=-=-=-=-=-
-            WebClient client = new WebClient();
+            WebClient webClient = new WebClient();
 
             // sync download
-            //client.DownloadFile(imageUri, $@"{desktopPath}\picture.jpg");
+            webClient.DownloadFile(imageUri, $@"{desktopPath}\picture.jpg");
 
-            //Console.WriteLine("File loaded");
+            Console.WriteLine("File loaded");
 
             #region Open Stream
             //string address = "https://media.inquirer.com/storage/inquirer/projects/year-in-pictures-2019/photos/POY2019_RedC.JPG";
@@ -100,6 +100,9 @@ namespace _01_WebClient
             string fileName = Path.GetFileName(address);
 
             await client.DownloadFileTaskAsync(address, $@"{desktopPath}\{fileName}");
+
+            // cancel download
+            //client.CancelAsync();
 
             Console.WriteLine($"{fileName} - File loaded!");
         }
