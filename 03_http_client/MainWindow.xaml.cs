@@ -23,6 +23,7 @@ namespace _03_http_client
     /// </summary>
     public partial class MainWindow : Window
     {
+        const string folderName = "Files";
         public MainWindow()
         {
             InitializeComponent();
@@ -45,7 +46,11 @@ namespace _03_http_client
             // get source file extension
             string extension = Path.GetExtension(url);
             // create destination file path
-            string dest = Path.Combine("Files", $"{name}.{extension}");
+            string dest = Path.Combine(folderName, $"{name}.{extension}");
+
+            // create directory if it does not exist
+            if (!Directory.Exists(folderName))
+                Directory.CreateDirectory(folderName);
 
             // 1 - download resources using HttpClient
             //HttpClient client = new HttpClient();
@@ -56,8 +61,8 @@ namespace _03_http_client
             //
             //    using (var stream = File.Create(dest))
             //    {
-            //        byte[] content = await response.Content.ReadAsByteArrayAsync();
-            //        stream.Write(content);
+            //        // write file content
+            //        await response.Content.CopyToAsync(stream);
             //    }
             //}
             //catch (Exception ex)
@@ -69,11 +74,17 @@ namespace _03_http_client
             WebClient webClient = new WebClient();
 
             webClient.DownloadProgressChanged += WebClient_DownloadProgressChanged;
+            webClient.DownloadFileCompleted += WebClient_DownloadFileCompleted;
 
             webClient.DownloadFileAsync(new Uri(url), dest);
 
             // add to history 
             AddHistoryItem(url);
+        }
+
+        private void WebClient_DownloadFileCompleted(object? sender, System.ComponentModel.AsyncCompletedEventArgs e)
+        {
+            this.Title = $"Download Completed";
         }
 
         private void WebClient_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)

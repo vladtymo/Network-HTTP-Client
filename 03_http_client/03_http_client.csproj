@@ -8,8 +8,7 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Files\" />
+  <ItemGroup>   
   </ItemGroup>
 
 </Project>

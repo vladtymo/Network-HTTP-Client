@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_WebClient", "01_WebClien
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_Downloader_Client", "02_Downloader_Client\02_Downloader_Client.csproj", "{AC894F6A-F8A4-46F1-BBC1-28105B78883C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_http_client", "03_http_client\03_http_client.csproj", "{3C694AC5-13D6-481C-95FA-BD0384ECE63E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03_http_client", "03_http_client\03_http_client.csproj", "{3C694AC5-13D6-481C-95FA-BD0384ECE63E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

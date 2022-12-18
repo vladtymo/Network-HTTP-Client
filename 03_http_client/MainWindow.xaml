@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_03_http_client"
         mc:Ignorable="d"
-        Title="MainWindow" Height="260" Width="463">
+        Title="MainWindow" Height="360" Width="574">
     <DockPanel>
         <Grid DockPanel.Dock="Top">
             <Grid.ColumnDefinitions>
