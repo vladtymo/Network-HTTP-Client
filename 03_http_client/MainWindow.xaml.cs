@@ -84,6 +84,7 @@ namespace _03_http_client
 
         private void WebClient_DownloadFileCompleted(object? sender, System.ComponentModel.AsyncCompletedEventArgs e)
         {
+            //if (e.Cancelled)
             this.Title = $"Download Completed";
         }
 
