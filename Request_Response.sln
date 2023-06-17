@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_Downloader_Client", "02_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03_http_client", "03_http_client\03_http_client.csproj", "{3C694AC5-13D6-481C-95FA-BD0384ECE63E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_downloader", "04_downloader\04_downloader.csproj", "{A36D9FB1-2678-48F0-89C4-6AD1A1024D6A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3C694AC5-13D6-481C-95FA-BD0384ECE63E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C694AC5-13D6-481C-95FA-BD0384ECE63E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C694AC5-13D6-481C-95FA-BD0384ECE63E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A36D9FB1-2678-48F0-89C4-6AD1A1024D6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A36D9FB1-2678-48F0-89C4-6AD1A1024D6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A36D9FB1-2678-48F0-89C4-6AD1A1024D6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A36D9FB1-2678-48F0-89C4-6AD1A1024D6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
