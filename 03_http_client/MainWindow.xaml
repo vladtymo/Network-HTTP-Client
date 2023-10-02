@@ -1,0 +1,24 @@
+﻿<Window x:Class="_03_http_client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_03_http_client"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="360" Width="574">
+    <DockPanel>
+        <Grid DockPanel.Dock="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="0">Url:</Label>
+            <TextBox x:Name="urlTxtBox" VerticalContentAlignment="Center" Margin="6" Grid.Row="0" Grid.Column="1"></TextBox>
+        </Grid>
+        <Button Click="DownloadBtnClick" DockPanel.Dock="Bottom" Padding="10" Background="DarkCyan" Foreground="White">Download</Button>
+        <ProgressBar x:Name="progressBar" DockPanel.Dock="Bottom" Height="6" Margin="6"></ProgressBar>
+        <TextBlock DockPanel.Dock="Top" TextAlignment="Center" FontSize="28">Download History</TextBlock>
+        <ListBox x:Name="historyList" Margin="6"></ListBox>
+    </DockPanel>
+</Window>

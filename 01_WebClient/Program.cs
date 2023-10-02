@@ -13,16 +13,16 @@ namespace _01_WebClient
     class Program
     {
         static string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-        const string imageUri = @"https://www.atlanticcouncil.org/wp-content/uploads/2021/12/2021-12-16T122128Z_1435296858_RC2KFR903WZL_RTRMADP_3_UKRAINE-CITYSCAPE-scaled-e1640800288914.jpg";
+        const string imageUri = @"https://cdn.pixabay.com/photo/2012/08/27/14/19/mountains-55067_640.png";
         const string image2Uri = @"https://ukrainetrek.com/images/rivne-ukraine-oblast-views-10.jpg";
         const string image3Uri = @"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg";
 
         static async Task Main(string[] args)
         {
             // -=-=-=-=-=-=-=-=-=-=- Donwload File using HttpClient -=-=-=-=-=-=-=-=-=-=-
-            HttpClient httpClient = new HttpClient();
+            //HttpClient httpClient = new HttpClient();
 
-            /////////////// variant 1
+            ///////////////// variant 1
             //HttpRequestMessage message = new HttpRequestMessage()
             //{
             //    Method = HttpMethod.Get,
@@ -40,8 +40,8 @@ namespace _01_WebClient
             //byte[] data = await httpClient.GetByteArrayAsync(image2Uri);
             //File.WriteAllBytes($@"{desktopPath}/image.jpg", data);
 
-            // -=-=-=-=-=-=-=-=-=-=- Donwload File using WebClient -=-=-=-=-=-=-=-=-=-=-
-            WebClient webClient = new WebClient();
+            //// -=-=-=-=-=-=-=-=-=-=- Donwload File using WebClient -=-=-=-=-=-=-=-=-=-=-
+            //WebClient webClient = new WebClient();
 
             // sync download
             //webClient.DownloadFile(imageUri, $@"{desktopPath}\picture.jpg");
@@ -84,9 +84,9 @@ namespace _01_WebClient
             #endregion
 
             // async download
-            Console.WriteLine("File loading...");
-            DownloadFileAsync("http://212.183.159.230/5MB.zip");
-            DownloadFileAsync("http://212.183.159.230/10MB.zip");
+            //Console.WriteLine("File loading...");
+            //DownloadFileAsync("http://212.183.159.230/5MB.zip");
+            //DownloadFileAsync("http://212.183.159.230/10MB.zip");
 
             Console.WriteLine("Continue...");
             Console.Read();
