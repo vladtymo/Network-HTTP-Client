@@ -20,9 +20,9 @@ namespace _01_WebClient
         static async Task Main(string[] args)
         {
             // -=-=-=-=-=-=-=-=-=-=- Donwload File using HttpClient -=-=-=-=-=-=-=-=-=-=-
-            //HttpClient httpClient = new HttpClient();
+            HttpClient httpClient = new HttpClient();
 
-            ///////////////// variant 1
+            /////////////// variant 1
             //HttpRequestMessage message = new HttpRequestMessage()
             //{
             //    Method = HttpMethod.Get,
