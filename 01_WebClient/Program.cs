@@ -41,7 +41,7 @@ namespace _01_WebClient
             //File.WriteAllBytes($@"{desktopPath}/image.jpg", data);
 
             //// -=-=-=-=-=-=-=-=-=-=- Donwload File using WebClient -=-=-=-=-=-=-=-=-=-=-
-            //WebClient webClient = new WebClient();
+            WebClient webClient = new WebClient();
 
             // sync download
             //webClient.DownloadFile(imageUri, $@"{desktopPath}\picture.jpg");
@@ -84,9 +84,9 @@ namespace _01_WebClient
             #endregion
 
             // async download
-            //Console.WriteLine("File loading...");
-            //DownloadFileAsync("http://212.183.159.230/5MB.zip");
-            //DownloadFileAsync("http://212.183.159.230/10MB.zip");
+            Console.WriteLine("File loading...");
+            DownloadFileAsync("http://212.183.159.230/5MB.zip");
+            DownloadFileAsync("http://212.183.159.230/10MB.zip");
 
             Console.WriteLine("Continue...");
             Console.Read();
