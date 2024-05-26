@@ -38,7 +38,7 @@ namespace _01_WebClient
 
             /////////////// variant 2
             //byte[] data = await httpClient.GetByteArrayAsync(image2Uri);
-            //File.WriteAllBytes($@"{desktopPath}/image.jpg", data);
+            //File.WriteAllBytes($@"{desktopPath}/image2.jpg", data);
 
             //// -=-=-=-=-=-=-=-=-=-=- Donwload File using WebClient -=-=-=-=-=-=-=-=-=-=-
             WebClient webClient = new WebClient();
@@ -86,7 +86,7 @@ namespace _01_WebClient
             // async download
             Console.WriteLine("File loading...");
             DownloadFileAsync("http://212.183.159.230/5MB.zip");
-            DownloadFileAsync("http://212.183.159.230/10MB.zip");
+            //DownloadFileAsync("http://212.183.159.230/10MB.zip");
 
             Console.WriteLine("Continue...");
             Console.Read();
